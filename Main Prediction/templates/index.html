@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthAI Pro - Advanced Health Risk Assessment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i> HealthAI Pro
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Risk Assessment</a>
+            <a href="#">Analytics</a>
+            <a href="#">Reports</a>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="user-info">
+                    <h3>Medical Professional</h3>
+                    <p>Healthcare Analytics</p>
+                </div>
+            </div>
+            <div class="metrics">
+                <div class="metric-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h4>Patients Assessed</h4>
+                        <p>1,234</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>Accuracy Rate</h4>
+                        <p>98.7%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>Doctor Prediction Based on Patient History</h1>
+                <p>AI-Powered Predictive Analytics for Precision Healthcare</p>
+            </div>
+
+            <div class="assessment-container">
+                <div class="form-card">
+                    <div class="progress-bar">
+                        <div class="step active">
+                            <i class="fas fa-user"></i>
+                            <span>Patient Info</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Vitals</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-notes-medical"></i>
+                            <span>Lifestyle</span>
+                        </div>
+                    </div>
+
+                    <form id="predict-form">
+                        <div class="form-sections">
+                            <div class="form-section active">
+                                <h3>Patient Information</h3>
+                                <div class="input-group">
+                                    <label>Age</label>
+                                    <input type="number" id="age" required>
+                                    <div class="input-hint">Patient's current age in years</div>
+                                </div>
+                                <div class="input-group">
+                                    <label>BMI</label>
+                                    <input type="number" id="bmi" step="0.1" required>
+                                    <div class="input-hint">Body Mass Index (kg/m²)</div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Vital Signs</h3>
+                                <div class="input-group">
+                                    <label>Blood Pressure (mmHg)</label>
+                                    <input type="number" id="blood_pressure" required>
+                                    <div class="input-hint">Systolic blood pressure</div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Cholesterol (mg/dL)</label>
+                                    <input type="number" id="cholesterol" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Heart Rate (bpm)</label>
+                                    <input type="number" id="heart_rate" required>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Lifestyle Factors</h3>
+                                <div class="input-group">
+                                    <label>Smoking Status</label>
+                                    <select id="smoking" required>
+                                        <option value="0">Non-smoker</option>
+                                        <option value="1">Smoker</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Alcohol Consumption</label>
+                                    <select id="alcohol" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Exercise Frequency</label>
+                                    <input type="range" id="exercise" min="0" max="7" step="1">
+                                    <div class="range-value">0 days/week</div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Diabetes Status</label>
+                                    <select id="diabetes" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" id="prev-btn" class="secondary-btn">Previous</button>
+                            <button type="button" id="next-btn">Next</button>
+                            <button type="submit" id="submit-btn" style="display: none;">Generate Assessment</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

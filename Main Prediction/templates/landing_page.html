@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPredictAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page.css') }}">
+    <script src="{{ url_for('static', filename='landing_page.js') }}" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            <span>HealthPredictAI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
+            <li><a href="{{ url_for('prediction_page') }}">Wanna Predict ?</a></li>
+        </ul>
+        <button class="get-started">Get Started</button>
+    </nav>
+
+    <!-- section 1 -->
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>Revolutionizing Healthcare with <br> <span>Predictive Analytics</span></h1>
+            <p>Harness the power of AI to predict patient outcomes, optimize treatment plans, and reduce healthcare costs with our cutting-edge analytics platform.</p>
+            <div class="buttons">
+                <button class="demo-btn">Request a Demo</button>
+                <button class="learn-btn">Learn More</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="/static/images/section1.png" alt="Healthcare AI" class="animated-image">
+        </div>
+    </section>
+
+    <!-- section 2 -->
+
+    <section id="trusted-hospitals">
+        <h2>Trusted by leading healthcare institutions</h2>
+        <div class="hospital-logos">
+            <div class="hospital">
+                <img src="/static/images/log1.png" alt="Mayo Clinic">
+                <p>Mayo Clinic</p>
+            </div>
+            <div class="hospital">
+                <img src="/static/images/log2.png" alt="Cleveland Clinic">
+                <p>Cleveland Clinic</p>
+            </div>
+            <div class="hospital">
+                <img src="/static/images/log3.png" alt="Johns Hopkins">
+                <p>Johns Hopkins</p>
+            </div>
+            <div class="hospital">
+                <img src="/static/images/log4.png" alt="Mass General">
+                <p>Mass General</p>
+            </div>
+            <div class="hospital">
+                <img src="/static/images/log5.png" alt="UCLA Health">
+                <p>UCLA Health</p>
+            </div>
+        </div>
+    </section>
+    
+    <!--section 3  -->
+    <section id="features">
+        <div class="features-header">
+            <h1>Powerful Features to Transform Healthcare</h1>
+            <p>Our advanced analytics platform combines AI, machine learning, and clinical expertise to deliver actionable insights.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="/static/images/logo1.png" alt="Predictive Modeling">
+                <h3>Predictive Modeling</h3>
+                <p>Accurately forecast patient outcomes using advanced statistical modeling and machine learning algorithms.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/static/images/logo2.png" alt="Personalized Care Plans">
+                <h3>Personalized Care Plans</h3>
+                <p>Generate tailored treatment recommendations based on individual patient data and similar case histories.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/static/images/logo3.png" alt="Real-time Monitoring">
+                <h3>Real-time Monitoring</h3>
+                <p>Track patient vitals and metrics in real-time with instant alerts for critical changes in condition.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/static/images/logo4.png" alt="Population Health">
+                <h3>Population Health</h3>
+                <p>Identify trends and risk factors across patient populations to implement preventative care strategies.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/static/images/logo5.png" alt="Comprehensive Reporting">
+                <h3>Comprehensive Reporting</h3>
+                <p>Generate detailed reports with visualizations that highlight key insights and recommendations.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/static/images/logo6.png" alt="EMR Integration">
+                <h3>EMR Integration</h3>
+                <p>Seamlessly connect with existing electronic medical record systems for complete data integration.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section 4 -->
+
+    <section id="metrics">
+        <div class="metrics-header">
+            <h1>Making a Measurable Difference</h1>
+            <p>Our clients are seeing real results with HealthPredictAI's predictive analytics platform.</p>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h2>27%</h2>
+                <p>Reduction in readmission rates</p>
+            </div>
+            <div class="metric-card">
+                <h2>42%</h2>
+                <p>Improvement in early diagnosis</p>
+            </div>
+            <div class="metric-card">
+                <h2>$3.2M</h2>
+                <p>Average annual savings</p>
+            </div>
+            <div class="metric-card">
+                <h2>93%</h2>
+                <p>Provider satisfaction rate</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section 5 -->
+
+    <section id="how-it-works">
+        <div class="how-it-works-header">
+            <h1>How HealthPredictAI Works</h1>
+            <p>Our streamlined process turns complex healthcare data into actionable insights.</p>
+        </div>
+    
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon">1</div>
+                <h2>Data Integration</h2>
+                <p>We securely connect to your existing systems to gather and normalize patient data from all relevant sources.</p>
+            </div>
+            <div class="arrow">›</div>
+            <div class="step">
+                <div class="step-icon">2</div>
+                <h2>AI Analysis</h2>
+                <p>Our advanced algorithms analyze patterns and trends to generate predictions and identify risk factors.</p>
+            </div>
+            <div class="arrow">›</div>
+            <div class="step">
+                <div class="step-icon">3</div>
+                <h2>Actionable Insights</h2>
+                <p>Receive clear, actionable recommendations through our intuitive dashboard to optimize patient care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 6 -->
+
+    <section id="interactive-dashboard">
+        <div class="dashboard-container">
+            <div class="dashboard-text">
+                <h1>Interactive Clinical Dashboard</h1>
+                <p>Our user-friendly dashboard puts powerful analytics at your fingertips, with customizable views for different roles.</p>
+                <ul>
+                    <li>✔ Intuitive visualization of patient risk scores</li>
+                    <li>✔ Clinical decision support notifications</li>
+                    <li>✔ Customizable reports and analytics</li>
+                    <li>✔ Mobile-friendly interface for on-the-go access</li>
+                </ul>
+            </div>
+            <div class="dashboard-image">
+                <img src="/static/images/section6.png" alt="Dashboard Preview">
+            </div>
+        </div>
+    </section>
+    
+    <!-- section 7 -->
+
+    <section id="testimonials">
+        <div class="testimonial-container">
+            <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <span class="quote-icon">❝</span>
+                    <p>HealthPredictAI has transformed how we approach patient care. The early warning system for sepsis alone has saved countless lives in our ICU department.</p>
+                    <div class="author">
+                        <img src="/static/images/section7.png" alt="Dr. Sarah Johnson">
+                        <div class="author-text">
+                            <strong>Dr. Sarah Johnson</strong>
+                            <span>Chief of Medicine, Memorial Hospital</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="testimonial">
+                    <span class="quote-icon">❝</span>
+                    <p>The cost savings have been substantial, but what matters most is the improved patient outcomes. Our readmission rates have decreased by 32% since implementing this platform.</p>
+                    <div class="author">
+                        <img src="/static/images/section7.png" alt="Robert Chen">
+                        <div class="author-text">
+                            <strong>Robert Chen</strong>
+                            <span>Healthcare Administrator, Northside Medical</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="testimonial">
+                    <span class="quote-icon">❝</span>
+                    <p>As a nurse practitioner, I appreciate how the system helps me prioritize patients who need attention most urgently. It's like having an extra set of experienced eyes on every case.</p>
+                    <div class="author">
+                        <img src="/static/images/section7.png" alt="Jessica Martinez">
+                        <div class="author-text">
+                            <strong>Jessica Martinez, NP</strong>
+                            <span>Primary Care, Westlake Health Partners</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="testimonial">
+                    <span class="quote-icon">❝</span>
+                    <p>This platform has significantly reduced our hospital's workload by automating predictive analysis. It helps us allocate resources more efficiently and improve patient outcomes.</p>
+                    <div class="author">
+                        <img src="/static/images/section7.png" alt="David Wilson">
+                        <div class="author-text">
+                            <strong>David Wilson</strong>
+                            <span>Hospital Operations Manager</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="testimonial">
+                    <span class="quote-icon">❝</span>
+                    <p>Our medical team relies on this system daily. The real-time insights and alerts have made our hospital safer and more proactive in handling emergencies.</p>
+                    <div class="author">
+                        <img src="/static/images/section7.png" alt="Sophia Patel">
+                        <div class="author-text">
+                            <strong>Sophia Patel</strong>
+                            <span>Emergency Care Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <!-- section 8 -->
+
+    <section class="faq-section" id="FAQ">
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to common questions about our predictive healthcare analytics solution.</p>
+        
+        <div class="faq-container">
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>How secure is patient data on your platform?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We follow industry-standard encryption and security protocols to ensure patient data safety.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>What EMR systems do you integrate with?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We integrate with various EMR systems, including Epic, Cerner, and Allscripts.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>How accurate are your predictive models?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our predictive models achieve an accuracy of over 90% using advanced machine learning techniques.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>What kind of training do you provide?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We provide online and in-person training for healthcare professionals to maximize platform use.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>What is the typical ROI for healthcare providers?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Healthcare providers typically see a 30-50% improvement in operational efficiency and patient outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 9 -->
+    <section class="last-section">
+    <section id="request-demo">
+        <div class="container">
+            <div class="demo-wrapper">
+                <!-- Left Image -->
+                <div class="demo-image1">
+                    <img src="/static/images/sec9.png" alt="Left Side Image">
+                </div>
+    
+                <!-- Demo Form -->
+                <div class="demo-form-container">
+                    <h2>Request Your Demo</h2>
+                    <form id="demo-form">
+                        <div class="form-group half">
+                            <label>First Name*</label>
+                            <input type="text" id="first-name" placeholder="First name" required>
+                        </div>
+    
+                        <div class="form-group half">
+                            <label>Last Name*</label>
+                            <input type="text" id="last-name" placeholder="Last name" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Work Email*</label>
+                            <input type="email" id="work-email" placeholder="your@email.com" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Organization*</label>
+                            <input type="text" id="organization" placeholder="Your organization" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Job Title*</label>
+                            <input type="text" id="job-title" placeholder="Your job title" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" id="phone-number" placeholder="Your phone number">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>How can we help?</label>
+                            <textarea id="help-text" placeholder="Tell us about your needs"></textarea>
+                        </div>
+    
+                        <button type="submit" id="submit-btn">Schedule My Demo</button>
+                    </form>
+    
+                    <p class="terms">
+                        By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.
+                    </p>
+                </div>
+    </section>
+
+     <!-- footer sec --> 
+
+     <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Transforming healthcare with predictive analytics and AI-powered insights.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="/static/images/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="/static/images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="/static/images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="/static/images/youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <div>
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Careers</a>
+                    <a href="#">News & Press</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Whitepapers</a>
+                    <a href="#">Webinars</a>
+                    <a href="#">Support Center</a>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                    <a href="#">HIPAA Compliance</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <hr>
+            <p>© 2025 HealthPredictAI. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
